@@ -1,1 +1,67 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="searchBar">
+        <div class="container">
+            <form action="/search" class="search__form" role="search" method="POST">
+                <input 
+                type="search"
+                aria-label="Search"
+                id="searchInput"
+                name="searchTerm"
+                placeholder="Search the site ..."/>
+            </form>
+            <div id="searchClose">Close</div>
+        </div>
+    </div>
+    <div class="container"></div>
+        <header class="header">
+        <a href="/" class="header__logo">NodeJS</a>
+        <nav class="header__nav">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/about">About</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
+            </ul>
+        </nav>
+        <div class="header__button">
+            <button class="searchBtn" aria-expanded="false">
+                Search
+                <!-- add search button logo -->
+            </button>
+        </div>
+        </header>
+
+        <div class="author">
+            <h1 class="author__heading">Hi, I amd Damian.</h1>
+            <p class="author__body">Security enthusiast, jack of all trades master of none</p>
+        </div>
+        
+        <img src="/img/hero-image.webp" alt="person looking at the window" class="hero-image" width="981" height="528">
+        
+        <section class="articles">
+            <h2 class="articles__heading">Latest Posts</h2>
+            <ul class="article-ul">
+                <li>
+                    <a href="/post/1">
+                        <span>Post title</span>
+                        <span class="article-list__date">created at 11.11</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
