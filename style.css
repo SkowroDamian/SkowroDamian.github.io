@@ -1,81 +1,132 @@
-/* Podstawowy reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body[a="dark"] {
+    filter: invert(1)
 }
 
-/* Styl globalny */
+body[a="dark"] img {
+    filter: invert(1)
+}
+
+body[a="dark"] img.ioda {
+    filter: invert(0)
+}
+
+body[a="dark"] .emoji {
+    filter:invert(1)
+}
+
+@media (prefers-color-scheme: dark) {
+    body[a="auto"] {
+        filter: invert(1)
+    }
+
+    body[a="auto"] img {
+        filter: invert(1)
+    }
+
+    body[a="auto"] img.ioda {
+        filter: invert(0)
+    }
+
+    body[a="auto"] .emoji {
+        filter:invert(1)
+    }
+}
+
+html, body {
+    background: white;
+}
+
+html {
+    height:100%
+}
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+    color: black;
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0;
+    min-height: 100%;
+    overflow-wrap:break-word
 }
 
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
+.post-meta {
+    text-align:right
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+h2, h3, h4, h5, h6 {
+    margin-top:3rem
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+hr {
+    margin:2rem 0
 }
 
-main {
-    padding: 2rem;
-    text-align: center;
+p {
+    margin:1rem 0
 }
 
-section {
-    margin: 2rem 0;
+li {
+    margin:0.4rem 0
 }
 
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+* :target {
+    background:yellow
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    max-width: 400px;
+.w {
+    max-width: 640px;
     margin: 0 auto;
+    padding:4rem 2rem
 }
 
-input, textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
+hr {
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+    border:0
+}
+
+hr:before {
+    content: "/////"
+}
+
+hr:after {
+    content: attr(data-content) "/////"
+}
+
+table {
+    width:100%
+}
+
+table, th, td {
+    border: thin solid black;
+    border-collapse: collapse;
+    padding:0.4rem
+}
+
+code {
+    color: white;
+    background:black
+}
+
+div.highlighter-rouge code {
+    display: block;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    padding:1rem
+}
+
+blockquote {
+    font-style: italic;
+    border: thin solid black;
+    padding:1rem
+}
+
+blockquote p {
+    margin:0
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto
 }
